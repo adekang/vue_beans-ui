@@ -15,8 +15,14 @@ export default {};
   background: pink;
   display: flex;
   padding: 16px;
+  position: relative;
+  z-index: 10;
 
   > .logo {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 6em;
     margin-right: auto;
   }
