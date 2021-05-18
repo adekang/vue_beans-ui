@@ -32,7 +32,7 @@ export default {
   components: {Topnav},
 
   setup() {
-    const menuVisible = inject<Ref<boolean>>('asideVisible'); // get
+    const menuVisible = inject<Ref<boolean>>('asideVisible');
     return {menuVisible};
   }
 };
