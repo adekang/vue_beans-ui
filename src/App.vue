@@ -3,12 +3,15 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue';
+import {provide, ref} from 'vue';
 
-export default defineComponent({
+export default {
   name: 'App',
-
-});
+  setup() {
+    let asideVisible = ref(true);
+    provide('asideVisible', asideVisible);
+  }
+};
 </script>
 
 <style>

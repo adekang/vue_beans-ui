@@ -3,6 +3,7 @@ import App from './App.vue';
 import {createWebHashHistory, createRouter} from 'vue-router';
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
+import './index.scss';
 
 
 const history = createWebHashHistory();
@@ -13,6 +14,8 @@ const router = createRouter({
     {path: '/Doc', component: Doc}
   ]
 });
+
+
 
 const app = createApp(App);
 app.use(router);
