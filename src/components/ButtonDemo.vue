@@ -5,7 +5,7 @@
   <Button theme="button"> 你好</Button>
   <Button theme="link"> 你好</Button>
   <Button theme="text"> 你好</Button>
-  <h2>按钮大小</h2>
+  <h2>大小模块</h2>
   <div>
     <Button size="big">大按钮</Button>
     <Button>中按钮</Button>
@@ -21,7 +21,7 @@
     <Button theme="text">普普通</Button>
     <Button size="small" theme="text">小小小</Button>
   </div>
-  <h2>颜色等级</h2>
+  <h2>等级模块</h2>
   <div>
     <div>
       <Button level="main">主要按钮</Button>
@@ -45,6 +45,10 @@
     <Button theme="link" disabled>禁用链接按钮</Button>
     <Button theme="text" disabled>禁用按钮</Button>
   </div>
+  <h2>加载模块</h2>
+  <div>
+    <Button loading>加载中</Button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -55,12 +59,7 @@ export default {
     Button
   },
 
-  setup() {
-    const onClick = () => {
-      console.log('点击');
-    };
+  setup() {}
 
-    return {onClick};
-  }
 };
 </script>
