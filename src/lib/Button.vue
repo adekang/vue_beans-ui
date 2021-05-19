@@ -1,5 +1,5 @@
 <template>
-  <button class="beans-button" :class="classes">
+  <button class="beans-button" :class="classes" :disabled="disabled">
     <slot/>
   </button>
 </template>
@@ -21,6 +21,10 @@ export default {
       type: String,
       default: 'normal',
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
   setup(props) {
     const {theme, size, level} = props;
@@ -45,6 +49,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .beans-button {
   box-sizing: border-box;
   height: $h;
@@ -168,5 +173,22 @@ $red: red;
     }
   }
 
+  &.beans-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+
+  &.beans-theme-link, &.beans-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+    }
+  }
 }
 </style>
