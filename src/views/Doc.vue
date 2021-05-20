@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
-    <Topnav class="nav"/>
+    <Topnav toggleMenuButtonVisible class="nav"/>
     <div class="content">
-      <aside v-if="menuVisible">
+      <aside v-if="toggleAside">
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -34,8 +34,8 @@ export default {
   components: {Topnav},
 
   setup() {
-    const menuVisible = inject<Ref<boolean>>('asideVisible');
-    return {menuVisible};
+    const toggleAside = inject<Ref<boolean>>('asideVisible');
+    return {toggleAside};
   }
 };
 </script>
