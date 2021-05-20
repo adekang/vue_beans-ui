@@ -48,6 +48,7 @@
   <h2>加载模块</h2>
   <div>
     <Button loading>加载中</Button>
+    <Button>加载完毕</Button>
   </div>
 </template>
 
