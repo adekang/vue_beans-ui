@@ -40,7 +40,7 @@ export default {
   components: {
     Button
   },
-  setup(props, context) {
+  setup(props: { ok: () => boolean; cancel: () => boolean; closeOnclickOverlay: boolean; }, context: { emit: (arg0: string, arg1: boolean) => void; }) {
     const close = () => {
       context.emit('update:visible', false);
     };
