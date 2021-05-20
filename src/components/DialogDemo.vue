@@ -1,8 +1,15 @@
 <template>
   <h1>Dialog组件</h1>
-  <Dialog v-model:visible="x"></Dialog>
+  <Dialog v-model:visible="x">
+    <template v-slot:title>
+      <strong>标题</strong>
+    </template>
+    <template v-slot:content>
+      <p>第一行文字</p>
+      <p>第二行文字</p>
+    </template>
+  </Dialog>
   <Button @click="toggle" :closeOnclickOverlay="false" :ok="f1" :cancel="f2">弹框</Button>
-
 </template>
 
 <script lang="ts">

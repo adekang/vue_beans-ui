@@ -3,10 +3,11 @@
     <div class="beans-dialog-overlay" @click="onClickOverlay"></div>
     <div class="beans-dialog-wrapper">
       <div class="beans-dialog">
-        <header>标题 <span @click="close" class="beans-dialog-close"></span></header>
+        <header>
+          <slot name="title"/>
+          <span @click="close" class="beans-dialog-close"></span></header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <slot name="content"/>
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>
