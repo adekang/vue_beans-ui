@@ -24,7 +24,7 @@
 import Button from './Button.vue';
 
 export default {
-
+  inheritAttrs: false,
   props: {
     visible: {
       type: Boolean,
@@ -34,8 +34,8 @@ export default {
       type: Boolean,
       default: true
     },
-    f1: Function,
-    f2: Function
+    ok: Function,
+    cancel: Function
   },
   components: {
     Button

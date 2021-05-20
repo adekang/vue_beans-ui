@@ -28,10 +28,10 @@ export default {
       x.value = !x.value;
     };
     const f1 = () => {
-      console.log(1);
+
     };
     const f2 = () => {
-      console.log(2);
+
     };
     return {x, toggle, f1, f2};
   }
