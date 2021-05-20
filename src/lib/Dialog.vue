@@ -23,6 +23,12 @@
 <script lang="ts">
 import Button from './Button.vue';
 
+type Prop = {
+  ok: () => boolean; cancel: () => boolean; closeOnclickOverlay: boolean;
+}
+type Context = {
+  emit: (arg0: string, arg1: boolean) => void;
+}
 export default {
   inheritAttrs: false,
   props: {
@@ -40,7 +46,8 @@ export default {
   components: {
     Button
   },
-  setup(props: { ok: () => boolean; cancel: () => boolean; closeOnclickOverlay: boolean; }, context: { emit: (arg0: string, arg1: boolean) => void; }) {
+
+  setup(props: Prop, context: Context) {
     const close = () => {
       context.emit('update:visible', false);
     };
