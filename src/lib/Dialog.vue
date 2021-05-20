@@ -1,20 +1,22 @@
 <template>
   <template v-if="visible">
-    <div class="beans-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="beans-dialog-wrapper">
-      <div class="beans-dialog">
-        <header>
-          <slot name="title"/>
-          <span @click="close" class="beans-dialog-close"></span></header>
-        <main>
-          <slot name="content"/>
-        </main>
-        <footer>
-          <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+    <Teleport to="body">
+      <div class="beans-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="beans-dialog-wrapper">
+        <div class="beans-dialog">
+          <header>
+            <slot name="title"/>
+            <span @click="close" class="beans-dialog-close"></span></header>
+          <main>
+            <slot name="content"/>
+          </main>
+          <footer>
+            <Button level="main" @click="ok">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
@@ -22,6 +24,7 @@
 import Button from './Button.vue';
 
 export default {
+
   props: {
     visible: {
       type: Boolean,
@@ -48,8 +51,9 @@ export default {
       }
     };
     const cancel = () => {
-      context.emit('cancel');
-      close();
+      if (props.cancel && props.cancel() !== false) {
+        close();
+      }
     };
     const onClickOverlay = () => {
       if (props.closeOnclickOverlay) {
