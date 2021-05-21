@@ -42,7 +42,7 @@ import 'prismjs';
 
 const Prism = (window as any).Prism;
 
-console.log(Prism);
+
 
 export default {
   components: {
