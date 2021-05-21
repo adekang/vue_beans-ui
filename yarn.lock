@@ -474,6 +474,11 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
+marked@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.nlark.com/marked/download/marked-2.0.4.tgz?cache=0&sync_timestamp=1621518330983&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmarked%2Fdownload%2Fmarked-2.0.4.tgz#71d54d41f27d91ac2ed308f73c301fe9f0657a94"
+  integrity sha1-cdVNQfJ9kawu0wj3PDAf6fBlepQ=
+
 merge-source-map@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npm.taobao.org/merge-source-map/download/merge-source-map-1.1.0.tgz#2fdde7e6020939f70906a68f2d7ae685e4c8c646"
