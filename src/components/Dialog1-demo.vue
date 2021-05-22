@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-  <Dialog v-model:visible="x" :closeOnclickOverlay="true" :ok="f1" :cancel="f2">
+  <Dialog v-model:visible="x" :closeOnclickOverlay="false" :ok="f1" :cancel="f2">
     <template v-slot:title>
       <strong>标题</strong>
     </template>

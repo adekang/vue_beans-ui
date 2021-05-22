@@ -11,8 +11,8 @@
             <slot name="content"/>
           </main>
           <footer>
-            <Button level="main" @click="ok">OK</Button>
-            <Button @click="cancel">Cancel</Button>
+            <Button level="main" @click="onClickOk">OK</Button>
+            <Button @click="onClickCancel">Cancel</Button>
           </footer>
         </div>
       </div>
@@ -30,7 +30,6 @@ type Context = {
   emit: (arg0: string, arg1: boolean) => void;
 }
 export default {
-  inheritAttrs: false,
   props: {
     visible: {
       type: Boolean,
@@ -51,13 +50,13 @@ export default {
     const close = () => {
       context.emit('update:visible', false);
     };
-    const ok = () => {
+    const onClickOk = () => {
       // 简写 props.ok?.() !== false
       if (props.ok && props.ok() !== false) {
         close();
       }
     };
-    const cancel = () => {
+    const onClickCancel = () => {
       if (props.cancel && props.cancel() !== false) {
         close();
       }
@@ -67,7 +66,7 @@ export default {
         close();
       }
     };
-    return {close, onClickOverlay, ok, cancel};
+    return {close, onClickOverlay, onClickOk, onClickCancel};
   }
 
 };
