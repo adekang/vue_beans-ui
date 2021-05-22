@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button class="beans-switch" @click="toggle" :class="{'beans-checked':value}"><span></span></button>
+    <button class="beans-switch" @click="toggle" :class="{'beans-checked':value}" :disabled="disabled"><span></span>
+    </button>
   </div>
 </template>
 
@@ -8,7 +9,8 @@
 
 export default {
   props: {
-    value: Boolean
+    value: Boolean,
+    disabled: Boolean
   },
   setup(props, context) {
     const toggle = () => {
