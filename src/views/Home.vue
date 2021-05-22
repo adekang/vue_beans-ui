@@ -56,9 +56,20 @@ $color: #08afb1;
 
 .features {
   margin: 64px auto;
-  width: 350px;
+  padding: 0 16px;
   @media (min-width: 800px) {
     width: 800px;
+    > ul {
+      > li {
+        width: 50%;
+
+        > ul {
+          > li {
+            width: 50%;
+          }
+        }
+      }
+    }
   }
   @media (min-width: 1200px) {
     width: 1200px;

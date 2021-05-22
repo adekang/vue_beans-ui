@@ -38,7 +38,7 @@ export default {
     },
     closeOnclickOverlay: {
       type: Boolean,
-      default: true
+      default: false
     },
     ok: Function,
     cancel: Function
