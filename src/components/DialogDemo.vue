@@ -1,39 +1,22 @@
 <template>
   <div>
     <h1>Dialog组件</h1>
-    <Dialog v-model:visible="x" :closeOnclickOverlay="true" :ok="f1" :cancel="f2">
-      <template v-slot:title>
-        <strong>标题</strong>
-      </template>
-      <template v-slot:content>
-        <p>第一行文字</p>
-        <p>第二行文字</p>
-      </template>
-    </Dialog>
-    <Button @click="toggle">弹框</Button>
+    <Demo :component="Dialog1Demo"/>
   </div>
 </template>
 
 <script lang="ts">
-import Dialog from '../lib/Dialog.vue';
-import Button from '../lib/Button.vue';
-import {ref} from 'vue';
+import Demo from './Demo.vue';
+import Dialog1Demo from './Dialog1-demo.vue';
 
 export default {
-
-  components: {Button, Dialog},
+  components: {
+    Demo
+  },
   setup() {
-    const x = ref(false);
-    const toggle = () => {
-      x.value = !x.value;
+    return {
+      Dialog1Demo
     };
-    const f1 = () => {
-
-    };
-    const f2 = () => {
-
-    };
-    return {x, toggle, f1, f2};
   }
 };
 </script>
