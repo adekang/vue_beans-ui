@@ -1,6 +1,6 @@
 {
-  "name": "beans",
-  "version": "0.0.0",
+  "name": "beans-ui-0.1",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
