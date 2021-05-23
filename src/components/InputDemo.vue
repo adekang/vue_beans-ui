@@ -1,20 +1,30 @@
 <template>
-  <h1>Input组件</h1>
-
-  <h2>双向绑定</h2>
-  <Input v-model:value="value" placeholder="请输入..."/>
-  <div>{{ value }}</div>
+  <div>
+    <h1>Input组件</h1>
+    <Demo :component="Input1Demo"/>
+    <Demo :component="Input2Demo"/>
+    <Demo :component="Input3Demo"/>
+    <Demo :component="Input4Demo"/>
+  </div>
 </template>
 
 <script lang="ts">
-import Input from '../lib/Input.vue';
-import {ref} from 'vue';
+import Demo from './Demo.vue';
+import Input1Demo from './Input1-demo.vue';
+import Input2Demo from './Input2-demo.vue';
+import Input3Demo from './Input3-demo.vue';
+import Input4Demo from './Input4-demo.vue';
 
-//TODO input还没有做完，明天继续做
+
 export default {
-  components: {Input},
+  components: {Demo},
   setup() {
-
+    return {
+      Input1Demo,
+      Input2Demo,
+      Input3Demo,
+      Input4Demo,
+    };
   }
 };
 </script>

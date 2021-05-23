@@ -7,7 +7,6 @@
     <Demo :component="Button4Demo"/>
     <Demo :component="Button5Demo"/>
   </div>
-
 </template>
 
 <script lang="ts">
