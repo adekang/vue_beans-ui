@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Demo from './Demo.vue';
-import Dialog1Demo from './Dialog1-demo.vue';
+import Dialog1Demo from './demo-code/DialogDemo/Dialog1-demo.vue';
 
 export default {
   components: {

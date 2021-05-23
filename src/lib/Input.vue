@@ -6,7 +6,7 @@
          :disabled="disabled"
          :class="classes"
          class="beans-input"
-  >
+  />
 </template>
 
 <script lang="ts">
@@ -29,7 +29,6 @@ export default {
   },
   setup(props, context) {
     const {size} = props;
-    console.log(size);
     const changeValue = (e) => {
       context.emit('update:value', e.target.value);
     };

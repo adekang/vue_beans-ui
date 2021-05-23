@@ -1,23 +1,24 @@
-
+<demo>
+禁止输入
+</demo>
 
 <template>
-  <h2>双向绑定</h2>
-  <Input v-model:value="value" placeholder="请输入数字..."/>
-  <div>value:{{ value }}</div>
+  <Input v-model:value="value" placeholder="请输入..." disabled/>
 </template>
 
 
 <script lang="ts">
-import Input from '../lib/Input.vue';
+import Input from '../../../lib/Input.vue';
 import {ref, defineComponent} from 'vue';
 
 export default defineComponent({
+  name: 'Input2Demo',
   components: {Input},
   props: {
     value: String
   },
   setup() {
-    const value = ref<string>('');
+    const value = ref('');
     return {
       value,
     };

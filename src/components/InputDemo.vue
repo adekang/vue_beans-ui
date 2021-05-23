@@ -10,11 +10,10 @@
 
 <script lang="ts">
 import Demo from './Demo.vue';
-import Input1Demo from './Input1-demo.vue';
-import Input2Demo from './Input2-demo.vue';
-import Input3Demo from './Input3-demo.vue';
-import Input4Demo from './Input4-demo.vue';
-
+import Input1Demo from './demo-code/InputDemo/Input1-demo.vue';
+import Input2Demo from './demo-code/InputDemo/Input2-demo.vue';
+import Input3Demo from './demo-code/InputDemo/Input3-demo.vue';
+import Input4Demo from './demo-code/InputDemo/Input4-demo.vue';
 
 export default {
   components: {Demo},
