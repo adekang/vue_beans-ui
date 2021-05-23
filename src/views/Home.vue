@@ -6,7 +6,7 @@
         <h1>轱辘UI</h1>
         <h2>一个厉害的 UI 框架</h2>
         <p class="actions">
-          <a href="https://github.com">GitHub</a>
+          <a href="https://github.com/adekang/vue_beans-ui">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>
@@ -18,7 +18,7 @@
             <use xlink:href="#icon-Vue"></use>
           </svg>
           <h3>基于 Vue 3</h3>
-          <p>骄傲地使用了 Vue 3 Composition API</p>
+          <p>使用了 Vue 3 Composition API</p>
         </li>
         <li>
           <svg>
@@ -47,10 +47,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$green: #00abb9;
-$color: #08afb1;
+@import "src/styles/var";
+
 .topnavAndBanner {
-  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+  background: linear-gradient(145deg, rgba(255, 236, 199, 1) 0%, rgba(251, 235, 197, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
@@ -113,7 +113,7 @@ $color: #08afb1;
 }
 
 .banner {
-  color: $color;
+  color: $beansFontColor;
   padding: 100px 0;
   display: flex;
   justify-content: center;
@@ -126,7 +126,7 @@ $color: #08afb1;
 
     a {
       margin: 0 8px;
-      background: $green;
+      background: $beansDeepYel;
       color: white;
       display: inline-block;
       border-radius: 4px;

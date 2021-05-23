@@ -48,6 +48,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "src/styles/var";
+
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
@@ -77,8 +79,8 @@ $grey: grey;
 
   &:hover,
   &:focus {
-    color: $blue;
-    border-color: $blue;
+    color: $beansDeepYel;
+    border-color: $beansDeepYel;
   }
 
   &:focus {
@@ -92,10 +94,10 @@ $grey: grey;
   &.beans-theme-link {
     border-color: transparent;
     box-shadow: none;
-    color: $blue;
+    color: $beansDeepYel;
 
     &:hover, &:focus {
-      color: lighten($blue, 10%);
+      color: lighten($beansDeepYel, 10%);
     }
   }
 
@@ -123,14 +125,14 @@ $grey: grey;
 
   &.beans-theme-button {
     &.beans-level-main {
-      background: $blue;
+      background: $beansDeepYel;
       color: white;
-      border-color: $blue;
+      border-color: $beansDeepYel;
 
       &:hover,
       &:focus {
-        background: darken($blue, 10%);
-        border-color: darken($blue, 10%);
+        background: darken($beansDeepYel, 10%);
+        border-color: darken($beansDeepYel, 10%);
       }
     }
 
@@ -160,11 +162,11 @@ $grey: grey;
 
   &.beans-theme-text {
     &.beans-level-main {
-      color: $blue;
+      color: $beansDeepYel;
 
       &:hover,
       &:focus {
-        color: darken($blue, 10%);
+        color: darken($beansDeepYel, 10%);
       }
     }
 
@@ -202,7 +204,7 @@ $grey: grey;
     display: inline-block;
     margin-right: 4px;
     border-radius: 8px;
-    border-color: $blue $blue $blue transparent;
+    border-color: $beansDeepYel $beansDeepYel $beansDeepYel transparent;
     border-style: solid;
     border-width: 2px;
     animation: beans-spin 1s infinite linear;

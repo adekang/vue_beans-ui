@@ -43,8 +43,9 @@ export default {
 </script>
 
 <style lang="scss">
-$border-color-hover: #40a9ff;
-$box-shadow-color: rgba(64, 169, 255, 0.5);
+@import "src/styles/var";
+
+$box-shadow-color: rgba(255, 163, 71, 0.5);
 $border-color: #d9d9d9;
 
 .beans-input {
@@ -62,7 +63,7 @@ $border-color: #d9d9d9;
   }
 
   &:hover {
-    border-color: $border-color-hover;
+    border-color: $beansDeepYel;
   }
 
   &:focus {

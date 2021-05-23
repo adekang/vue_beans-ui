@@ -2,17 +2,22 @@
   <div class="topnav">
     <router-link to="/" class="logo">
       <svg class="icon">
-        <use xlink:href="#icon-waiting"></use>
+        <use xlink:href="#icon-beans-icon"></use>
       </svg>
     </router-link>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
       </li>
+      <li>
+        <a href="https://github.com/adekang">
+          GitHub
+        </a>
+      </li>
     </ul>
 
     <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleAside">
-      <use xlink:href="#icon-menu"></use>
+      <use xlink:href="#icon-caidan"></use>
     </svg>
   </div>
 </template>
@@ -38,6 +43,8 @@ export default {
 
 
 <style lang="scss" scoped>
+@import "src/styles/var";
+
 .topnav {
   display: flex;
   padding: 15px;
@@ -48,6 +55,8 @@ export default {
   z-index: 99;
   justify-content: center;
   align-items: center;
+  background-color: $beansBg;
+  box-shadow: 0 5px 5px rgb(51 51 51 / 10%);
 
   > .logo {
     display: flex;
@@ -64,11 +73,18 @@ export default {
 
   > .menu {
     display: flex;
+    align-items: center;
     white-space: nowrap;
     flex-wrap: nowrap;
 
     > li {
       margin: 0 1em;
+
+      > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 
@@ -92,6 +108,11 @@ export default {
     > .toggleAside {
       display: inline-block;
     }
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
   }
 }
 </style>

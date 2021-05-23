@@ -73,6 +73,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "src/styles/var";
+
 $radius: 4px;
 $border-color: #d9d9d9;
 .beans-dialog {

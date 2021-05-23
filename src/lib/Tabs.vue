@@ -87,7 +87,9 @@ export default {
 </script>
 
 <style lang='scss'>
-$blue: #40a9ff;
+@import "src/styles/var";
+
+
 $color: #333;
 $border-color: #d9d9d9;
 .beans-tabs {
@@ -107,14 +109,14 @@ $border-color: #d9d9d9;
       }
 
       &.selected {
-        color: $blue;
+        color: $beansDeepYel;
       }
     }
 
     &-indicator {
       position: absolute;
       height: 3px;
-      background: $blue;
+      background: $beansDeepYel;
       left: 0;
       bottom: -1px;
       width: 100px;

@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "src/styles/var";
+
 $h: 22px;
 $h2: $h - 4px;
 .beans-switch {
@@ -44,7 +46,7 @@ $h2: $h - 4px;
   }
 
   &.beans-checked {
-    background: #1890ff;
+    background: $beansDeepYel;
 
   }
 

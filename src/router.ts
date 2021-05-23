@@ -1,4 +1,7 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
+import {h} from 'vue';
+
+// 页面引入
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
 import ButtonDemo from './components/ButtonDemo.vue';
@@ -7,9 +10,8 @@ import TabsDemo from './components/TabsDemo.vue';
 import DialogDemo from './components/DialogDemo.vue';
 import InputDemo from './components/InputDemo.vue';
 import RadioDemo from './components/RadioDemo.vue';
-import {h} from 'vue';
+// md文档引入
 import Markdown from './components/Markdown.vue';
-
 import intro from './markdown/intro.md';
 import getStarted from './markdown/get-started.md';
 import install from './markdown/install.md';
