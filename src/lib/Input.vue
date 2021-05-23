@@ -57,6 +57,10 @@ $border-color: #d9d9d9;
   color: rgba(0, 0, 0, .85);
   transition: all 250ms;
 
+  & + & {
+    margin-left: 10px;
+  }
+
   &:hover {
     border-color: $border-color-hover;
   }

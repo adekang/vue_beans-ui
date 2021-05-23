@@ -6,6 +6,7 @@ import SwitchDemo from './components/SwitchDemo.vue';
 import TabsDemo from './components/TabsDemo.vue';
 import DialogDemo from './components/DialogDemo.vue';
 import InputDemo from './components/InputDemo.vue';
+import RadioDemo from './components/RadioDemo.vue';
 import {h} from 'vue';
 import Markdown from './components/Markdown.vue';
 
@@ -30,6 +31,7 @@ export const router = createRouter({
         {path: 'dialog', component: DialogDemo},
         {path: 'tabs', component: TabsDemo},
         {path: 'input', component: InputDemo},
+        {path: 'radio', component: RadioDemo},
       ]
     }
   ]
